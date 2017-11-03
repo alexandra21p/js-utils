@@ -1,3 +1,6 @@
+// returns object's keys prefixed with parent
+// ignores arrays and functions
+
 function getNestedKeys( object, prefix = "" ) {
   let result = [];
   const keys = Object.keys( object );
@@ -34,3 +37,4 @@ let object = {
 };
 
 console.log( getNestedKeys( object ) );
+// ["user.name", "user.age", "user.contact.address", "account"]
