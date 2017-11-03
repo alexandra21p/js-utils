@@ -1,5 +1,5 @@
 function getNestedKeys( object, prefix = "" ) {
-	let result = [];
+  let result = [];
   const keys = Object.keys( object );
   
   let partial = keys.reduce( ( acc, currentKey ) => {
@@ -19,18 +19,18 @@ function getNestedKeys( object, prefix = "" ) {
 
 
 let object = {
-	user: {
-  	name: "bla",
-    age: 18,
-    contact: {
-    	address: "streetname"
-    }, 
-    arr: [1,2,3]
-  },
-  account: "blabla",
-  getId: function() {
+   user: {
+       name: "bla",
+       age: 18,
+       contact: {
+    	  address: "streetname"
+       }, 
+       arr: [1,2,3]
+   },
+   account: "blabla",
+   getId: function() {
   	return "something";
-  }
+   }
 };
 
 console.log( getNestedKeys( object ) );
